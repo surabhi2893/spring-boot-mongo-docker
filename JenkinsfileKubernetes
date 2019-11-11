@@ -25,6 +25,7 @@ node{
      }
      
      stage("Deploy To Kuberates Cluster"){
+        sh 'kubectl delete rc spring-controller mongo-controller'
        kubernetesDeploy(
          configs: 'springBootMongo.yml', 
          kubeconfigId: 'KUBERNETES_CLUSTER_CONFIG',
