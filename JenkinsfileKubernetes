@@ -24,9 +24,9 @@ node{
         sh 'docker push pkw0301/spring-boot-mongo'
      }
      
+     
      stage("Deploy To Kuberates Cluster"){
         kubernetesDeploy(
-	 kubectl delete rc spring-controller mongo-controller
          configs: 'springBootMongo.yml', 
          kubeconfigId: 'KUBERNETES_CLUSTER_CONFIG',
          enableConfigSubstitution: true
