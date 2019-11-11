@@ -13,6 +13,7 @@ node{
     
     
     stage('Build Docker Image'){
+        sh 'docker rmi -f pkw0301/spring-boot-mongo'
         sh 'docker build -t pkw0301/spring-boot-mongo .'
     }
     
