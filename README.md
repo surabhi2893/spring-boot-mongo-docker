@@ -34,4 +34,4 @@ docker ps -a
 ```
 
 ## License
-[Mithun Technologies](http://mithuntechnologies.co.in)
+[DevOps Online Classes](https://devops-online-classes.my-free.website)
