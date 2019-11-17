@@ -1,7 +1,7 @@
 node{
      
     stage('SCM Checkout'){
-        git url:  'https://github.com/prakashk0301/spring-boot-mongo-docker.git',branch: 'master'
+        git url:  'https://github.com/surabhi2893/spring-boot-mongo-docker.git',branch: 'master'
     }
     
     stage(" Maven Clean Package"){
@@ -21,7 +21,7 @@ node{
         withCredentials([string(credentialsId: 'Surabhi2893!', variable: 'Surabhi2893!')]) {
           sh "docker login -u surabhi2893sang -p ${Surabhi2893!}"
         }
-        sh 'docker push pkw0301/spring-boot-mongo'
+        sh 'docker push surabhi2893sang/forkub'
      }
      
      
