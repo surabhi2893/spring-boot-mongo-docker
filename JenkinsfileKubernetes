@@ -13,15 +13,15 @@ node{
     
     
     stage('Build Docker Image'){
-        sh 'docker rmi -f pkw0301/spring-boot-mongo'
-        sh 'docker build -t pkw0301/spring-boot-mongo .'
+        sh 'docker rmi -f surabhi2893sang/spring-boot-mongo'
+        sh 'docker build -t surabhi2893sang/spring-boot-mongo .'
     }
     
     stage('Push Docker Image'){
         withCredentials([string(credentialsId: 'DOCKER_HUB_PASSWORD', variable: 'DOCKER_HUB_PASSWORD')]) {
           sh "docker login -u ${DOCKER_HUB_ID} -p ${DOCKER_HUB_PASSWORD}"
         }
-        sh 'docker push pkw0301/spring-boot-mongo'
+        sh 'docker push surabhi2893sang/spring-boot-mongo'
      }
      
      
